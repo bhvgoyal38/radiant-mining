@@ -1,0 +1,48 @@
+<%- include("partials/header") %>
+<div id="content">
+<div class="container py-3">
+	<% function isEmpty(obj) {
+    for(var key in obj) {
+        if(obj.hasOwnProperty(key))
+            return false;
+    }
+    return true; 
+} %>
+<% if(isEmpty(results)){ %>
+	<div class="p-2">
+		<h2 style="text-shadow: 2px 2px 5px black">Sorry! No results found for keyword "<%= key %>"</h2>
+	</div>
+		<div class="container py-3">
+			<h4 class="text-white" style="text-shadow: 2px 2px 5px black">View our Mining Equipments</h4>
+		<div class="row text-center text-dark">
+			<% products.forEach(function(product){ %>
+				<div class="col-md-4">
+					<div class="card my-3">
+						<img src="/images/<%= product.img %>" style="height: 15em;<%= product.style %>" class="card-img-top mx-auto">
+						<div class="card-body">														
+							<h5 class="card-title" style="height:2em"><%= product.name %></h5>	
+							<a class="btn btn-radiant" style="color: white" href="/product/<%= product.link %>">Details</a>
+						</div>
+					</div>
+				</div>
+			<% }); %>
+<% } else { %>
+		<h2 style="text-shadow: 2px 2px 5px black">Search results for keyword "<%= key %>"</h2>
+<div class="row">
+<% results.forEach(function(result){ %>
+			<div class="col-md-4 text-center text-dark">
+				<div class="card my-2">
+					<img src="/images/<%= result.img %>" style="<%= result.style %>" class="card-img-top mx-auto mw-100">
+					<div class="card-body">
+						<h5 class="card-title" style="height: 2.5rem"><%= result.name %></h5>	
+						<a class="btn btn-radiant" style="color: white" href="/product/<%= result.link %>">Details</a>
+					</div>
+				</div>
+			</div>
+<% });%>
+</div>
+<% }; %>
+</div>
+</div>
+	</div>
+<%- include("partials/footer") %>

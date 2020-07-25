@@ -1,0 +1,20 @@
+<%- include("partials/header") %>
+<div id="content">
+	<div class="container py-3">
+			<h2 class="text-white" style="text-shadow: 2px 2px 5px black">Mining Equipments</h2>
+		<div class="row text-center text-dark">
+			<% products.forEach(function(product){ %>
+				<div class="col-md-6 col-lg-4">
+					<div class="card my-3">
+						<img src="/images/<%= product.img %>" style="height: 15em;<%= product.style %>" class="card-img-top mx-auto">
+						<div class="card-body">														
+							<h5 class="card-title" style="height:2em"><%= product.name %></h5>	
+							<a class="btn btn-radiant" style="color: white;" href="/product/<%= product.link %>">Details</a>
+						</div>
+					</div>
+				</div>
+			<% }); %>
+		</div>
+	</div>
+</div>
+<%- include("partials/footer") %>

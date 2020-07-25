@@ -1,0 +1,94 @@
+<%- include("partials/header") %>
+<div id="content" style="color: white;">
+<div class="container py-4">
+	<div class="row">
+		<div class="col-lg-9">
+			<div class="card p-4 text-dark" style="background: #f1f1f1">
+			<h1>
+				Company Profile
+			</h1><hr style="background:  black;">
+				<p>	
+				<strong>Radiant Mining Technologies Ltd</strong> is an <strong>ISO 9001 certified company</strong> and leading manufacturer and Supplier of Mining Equipments. Established in the year 2005, in West Bengal, the company has been able to reach significant heights under the management of our Director <strong>Mr. Aditya Ganeriwal</strong> who is backed by a wide experience in the field we have been able to cater a huge client base all over India. <br />
+		<br />
+		<b>Our Goal</b><br>
+					<br>
+		The company hopes for other major businesses interest, which includes contractual mining which have been exhibiting strong growth in the future, driven by increasing investments in the mining sector. Besides, we will ensure higher customer delight by-<ul><li>Providing World Class products &amp; services on time</li><li>Application of latest technology</li><li>Adapting highest quality standards</li><li>Giving Real Value for Money</li><li>Becoming a Global Brand by achieving manufacturing precision</li><li>Giving Zero defect products</li><li>Becoming Leaders through commitment</li><li>Adapting Stringent Quality Control</li></ul><br />
+		<b>Quality Assurance</b><br />
+		We have been successfully able to build a strong creditability and enjoy the significant market share and are supplier of choice. We are backed by the strong brand equity and stringent quality and unique customer care. Our credo is uncompromising quality and spirit of excellence. <br />
+		<br />
+		<b>Network</b><br />
+		We have served &amp; supported all our valued customers with great dedication with professional approach in installation and after sales service with the teams available across India The products manufactured by us are marketed all over India through well established marketing network of dealers spread all over the country.<br />
+		<br />
+		<b>Customer Satisfaction</b><br />
+		Today we are proud to be associated with clients who regularly buy our products and give us an opportunity to serve them.The customer complaint ratio of our equipement is below 1000 PPM (0.1%) and the customer satisfaction index is 97%. When it comes to developing special purpose Machines, many well known companies put complete faith in our capability and entrust the job to us. We are committed towards best possible pre &amp; post sales service and respond to you in the shortest response time. This commitment to ensure your delight will be an ever-going process.<br />
+		<br />
+		<b>Our Clients</b><br />
+		<ul><li>Western Coalfields Ltd.</li><li>Mahanadi Coalfields Ltd.</li><li>Central Coalfields Ltd.</li><li>Eastern Coalfields Ltd.</li><li>Bharat Coking Coal Ltd.</li><li>Monnet Ispat &amp; Energy Ltd.</li></ul><br />
+		<b>Accreditations &amp; Approvals</b><br />
+		<ul><li>Director General of Mines Safety, Dhanbad</li><li>ISO 9001-2008 from JAS-ANZ Australia &amp; New Zealand</li><li>Dun &amp; Bradstreet</li></ul>
+				</p>
+			</div>	
+		</div>
+	<div class="col-lg-3 px-lg-0">
+		<div class="card mb-lg-2 mt-lg-0 my-4">
+			<h3 class="text-dark text-center mt-2">
+				Explore Products
+			</h3>
+			<div id="carouselExampleIndicators" class="carousel slide" data-interval="3000" style="min-height: 330px" data-ride="carousel">
+				<div class="carousel-inner text-center text-dark">
+					<div class="carousel-item active">
+					<div class="card border-0">
+						<img src="/images/<%= products[0].img %>" class="card-img-top mx-auto" style="<%= products[0].style %>">
+						<div class="card-body">
+							<h5 class="card-title"><%= products[0].name %></h5>	
+							<a class="btn btn-radiant" style="color: white;" href="/product/<%= products[0].link %>">Details</a>
+						</div>
+					</div>
+					</div>
+					<% for (var i=1; i < products.length; i++){ %>
+					<div class="carousel-item">
+						<div class="card border-0">
+						<img src="/images/<%= products[i].img %>" style="<%= products[i].style %>" class="card-img-top mx-auto">
+						<div class="card-body">
+							<h5 class="card-title"><%= products[i].name %></h5>	
+							<a class="btn btn-radiant" style="color: white" href="/product/<%= products[i].link %>">Details</a>
+						</div>
+					</div>
+					</div>
+					<% }; %>
+					</div>
+				</div>
+					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+     <span style="color: black;" aria-hidden="true"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span style="color: black;" aria-hidden="true"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+	  <span class="sr-only">Next</span></a>
+			</div>
+		<div class="card my-lg-2 my-4 py-2 text-dark text-center">
+			<h3 class="mt-2">
+				Contact Us
+			</h3>
+			<table class="text-center text-dark" style="width: 100%">
+	<tr><th>Radiant Mining Technologies Ltd.</th></tr>
+	<tr><td>Room No:5/5, Bldg. No:5, Koyla Vihar,</td></tr>
+	<tr><td>Vasundhara, V I P Road, Kolkata,</td></tr>
+	<tr><td>West Bengal - 700052, India</td></tr>
+	</table>
+			<br>
+	<table class="text-center text-dark" style="width: 100%">
+	<tr><td><b><i class="fas fa-phone-alt"></i>  Mobile:</b> <td>+91-9830777900</td></tr>
+	<tr><td><b><i class="fas fa-tty"></i>  Phone:</b> </td><td>+91-33-25250327,</td></tr>
+	<tr><td></td><td>+91-33-40619042</td></tr>
+	<tr><td><b><i class="fas fa-fax"></i>  Fax:</b> <td>+91-33-25250230</td></tr>
+</table>
+			<div class="card-body">
+			<a class="btn-radiant btn" style="color: white;" href="/contact">Enquiry</a>
+			</div>
+		</div>
+		</div>
+		</div>
+	</div>
+</div>
+<%- include("partials/footer") %>

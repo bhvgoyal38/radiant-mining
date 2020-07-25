@@ -1,0 +1,77 @@
+<div id="footer">
+	<div class="container py-4  d-none d-lg-block">
+		<div class="row text-dark">
+			<div class="col-lg-4">
+				Radiant Mining Technologies Ltd.
+		<hr>
+				<div class="my-3">
+					<a href="/">Home</a>
+				</div>
+				<div class="my-3">
+					<a href="/about-us">About Us</a>
+				</div>
+				<div class="my-3">
+					<a href="/gallery">Gallery</a>
+				</div>
+				<div class="my-3">
+					<a href="/products">Our Products</a>
+				</div>
+				<div class="my-3">
+					<a href="/contact">Contact Us</a>
+			</div>
+			</div>
+			<div class="col-lg-4">
+				Products
+		<hr>
+				<% products.forEach(function(product){ %>
+				<div class="my-4">
+				<a href="/product/<%= product.link %>"><%= product.name %></a>
+				</div>
+				<% }); %>
+			</div>
+			<div class="col-lg-4">
+					Contact Us
+		<hr>
+				<div class="row">
+				<div class="col-2 mb-4 pt-4">
+					<a target="_blank" href="https://maps.google.com/maps?ll=22.630277,88.433461&z=14&t=m&hl=en&gl=IN&mapclient=embed&cid=16432837614332982308" class="btn rounded-circle" style="box-shadow: 0px 0px 5px black;"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+				</div>
+					<div class="col-10 mb-4">
+						<a target="_blank" href="https://maps.google.com/maps?ll=22.630277,88.433461&z=14&t=m&hl=en&gl=IN&mapclient=embed&cid=16432837614332982308">Get Directions</a><br>
+					 Room No:5/5, Bldg. No:5, Koyla Vihar,<br>Vasundhara, V I P Road, Kolkata,<br>West Bengal - 700052, India<br>
+					</div>
+					<div class="col-2 mb-4">
+						<a class="btn rounded-circle" style="box-shadow: 0px 0px 5px black;" href="mailto:radiantminingtech@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+					</div>
+						<div class="col-10 pt-1 align-items-middle mb-4">
+						<a href="mailto:radiantminingtech@gmail.com">radiantminingtech@gmail.com</a>
+					</div>
+					<div class="col-2 mb-4">
+					<a class="btn rounded-circle" style="box-shadow: 0px 0px 5px black;" href="tel:9830777900"><i class="fa fa-phone-alt" aria-hidden="true"></i></a>
+				</div>
+					<div class="col-10 pt-1 mb-4">
+						<a href="tel:9830777900">9830777900</a> |
+						<a href="tel:9433051678">9433051678</a>
+					</div>
+					<div class="col-2 mb-4">
+					<a class="btn rounded-circle" style="box-shadow: 0px 0px 5px black;" href="tel:03340003932"><i class="fa fa-tty" aria-hidden="true"></i></a>
+				</div>
+					<div class="col-10 pt-1 align-items-middle mb-4">
+						<a href="tel:03340003932">03340003932</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	<div class="container pb-3">
+		
+		<hr>
+		©Copyright 2019 Radiant Mining Technologies Ltd.  All rights reserved.
+	</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<script src="/scripts/home.js"></script>
+	</body>
+</html>
